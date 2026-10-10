@@ -1,8 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="100" fill="#301A68"/>
-  <circle cx="256" cy="256" r="145" fill="none" stroke="#D9B779" stroke-width="5"/>
-  <circle cx="256" cy="256" r="112" fill="none" stroke="#D9B779" stroke-width="2" opacity="0.6"/>
-  <circle cx="256" cy="256" r="22" fill="#D9B779"/>
-  <path d="M256 166 V220 M256 292 V346 M166 256 H220 M292 256 H346" stroke="#D9B779" stroke-width="4" stroke-linecap="round"/>
-  <path d="M256 120 V145 M256 367 V392 M120 256 H145 M367 256 H392" stroke="#F9F6F2" stroke-width="3" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#48216F"/>
+      <stop offset="100%" stop-color="#241044"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F8E7B8"/>
+      <stop offset="50%" stop-color="#D9B66F"/>
+      <stop offset="100%" stop-color="#F4DFA6"/>
+    </linearGradient>
+  </defs>  <rect width="512" height="512" rx="112" fill="url(#bg)"/>  <circle cx="256" cy="222" r="53" fill="url(#gold)"/><path d="M116 315
+C165 287 210 287 256 315
+C302 343 347 343 396 315"
+fill="none"
+stroke="url(#gold)"
+stroke-width="7"
+stroke-linecap="round"/>
+
+<path d="M146 355
+C188 337 222 337 256 355
+C290 373 324 373 366 355"
+fill="none"
+stroke="#D9B66F"
+stroke-width="3"
+stroke-linecap="round"
+opacity="0.75"/>
+
+<path d="M256 119 L263 139 L283 146 L263 153 L256 173 L249 153 L229 146 L249 139 Z"
+fill="#F8E7B8"/>
+
 </svg>
