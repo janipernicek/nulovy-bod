@@ -3,601 +3,420 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#301A68">
+<meta name="description" content="24 zastavení na cestě k sobě. Dopřej si chvíli klidu, ztiš hluk kolem sebe a znovu zaslechni svůj vlastní hlas.">
+<meta name="theme-color" content="#170e27">
 
 <title>24 zastavení | NULOVÝ BOD – návrat k sobě</title>
 
-<meta name="description" content="24 zastavení na cestě k sobě. Dopřej si chvíli klidu, naslouchej svým potřebám a vrať se k tomu, na čem ti záleží.">
-
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23301A68'/%3E%3Ccircle cx='50' cy='50' r='29' fill='none' stroke='%23D9B45B' stroke-width='4'/%3E%3C/svg%3E">
-
-<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23301A68'/%3E%3Ccircle cx='50' cy='50' r='29' fill='none' stroke='%23D9B45B' stroke-width='4'/%3E%3C/svg%3E">
+<!-- Ikona webu a zástupce na ploše -->
+<link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
 
 <style>
 :root {
-  --purple: #301A68;
-  --deep-purple: #211044;
-  --light-purple: #EDE5F7;
-  --gold: #D9B45B;
-  --cream: #F9F6F2;
-  --text: #302641;
-  --muted: #756A83;
-  --white: #FFFFFF;
+  --night: #170e27;
+  --purple: #302044;
+  --purple-light: #4c3566;
+  --gold: #e8cc91;
+  --cream: #fbf5eb;
+  --muted: #d8c9df;
 }
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
+* { box-sizing: border-box; }
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  color: var(--text);
-  background: var(--cream);
-  line-height: 1.7;
-}
-
-header {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(145deg, #211044, #301A68 65%, #45267D);
   color: var(--cream);
+  font-family: Georgia, "Times New Roman", serif;
+  background:
+    radial-gradient(ellipse at 50% 0%, #5b3971 0%, transparent 48%),
+    linear-gradient(160deg, #21132f, var(--night) 72%);
+  min-height: 100vh;
+}
+header {
   text-align: center;
-  padding: 58px 22px 52px;
+  padding: 54px 20px 34px;
 }
-
-header::before {
-  content: "";
-  position: absolute;
-  width: 220px;
-  height: 220px;
-  border: 1px solid rgba(217,180,91,.2);
-  border-radius: 50%;
-  top: -130px;
-  right: -75px;
-}
-
-header::after {
-  content: "";
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  border: 1px solid rgba(217,180,91,.17);
-  border-radius: 50%;
-  bottom: -120px;
-  left: -65px;
-}
-
 .eyebrow {
-  position: relative;
-  z-index: 1;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: 11px;
   color: var(--gold);
+  letter-spacing: 5px;
+  font: 11px Arial, sans-serif;
+  text-transform: uppercase;
 }
-
 h1 {
-  position: relative;
-  z-index: 1;
-  font-family: Georgia, serif;
+  font-size: clamp(38px, 9vw, 66px);
+  letter-spacing: 5px;
   font-weight: normal;
-  font-size: clamp(38px, 9vw, 62px);
-  letter-spacing: 3px;
-  line-height: 1.15;
-  margin: 18px 0 12px;
+  margin: 20px 0 12px;
+  color: #f4dfb0;
+  text-shadow: 0 0 32px #d8b77855;
 }
-
 .subtitle {
-  position: relative;
-  z-index: 1;
-  color: #E9DDF7;
-  font-size: 15px;
-  letter-spacing: 1px;
-  margin: 0;
+  font-size: 19px;
+  font-style: italic;
+  color: #e5d7e9;
+  margin: 0 auto 18px;
+  line-height: 1.6;
 }
-
-.gold-line {
-  width: 65px;
-  height: 2px;
-  background: var(--gold);
-  margin: 27px auto 0;
-}
-
 .intro {
-  max-width: 570px;
+  max-width: 520px;
   margin: 0 auto;
-  padding: 36px 24px 18px;
-  text-align: center;
+  color: var(--muted);
+  font: 14px/1.8 Arial, sans-serif;
 }
-
-.intro p {
-  margin: 10px 0;
+.line {
+  width: 70px;
+  height: 1px;
+  margin: 26px auto;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
-
-.intro .quote {
-  font-family: Georgia, serif;
-  font-size: clamp(22px, 5vw, 27px);
-  line-height: 1.5;
-  color: var(--purple);
-  margin-bottom: 20px;
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 18px 55px;
 }
-
 .section-title {
   text-align: center;
-  font-family: Georgia, serif;
-  font-size: 27px;
+  color: var(--gold);
+  font-size: 21px;
   font-weight: normal;
-  color: var(--purple);
-  margin: 24px 20px 8px;
+  margin: 10px 0 8px;
 }
-
-.section-description {
-  max-width: 440px;
-  margin: 0 auto;
-  padding: 0 24px;
+.section-note {
   text-align: center;
-  font-size: 14px;
-  color: var(--muted);
+  color: #c7b6d0;
+  font: 12px/1.7 Arial, sans-serif;
+  margin: 0 auto 27px;
 }
-
-.stops {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 25px 18px 38px;
+.calendar {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 13px;
+  gap: 12px;
 }
-
-.stop {
+.door {
+  min-height: 108px;
   position: relative;
-  min-height: 125px;
-  border: 1px solid rgba(217,180,91,.6);
-  border-radius: 15px;
-  padding: 15px 7px;
   cursor: pointer;
-  background: var(--white);
-  color: var(--purple);
-  transition: transform .2s, box-shadow .2s;
-  box-shadow: 0 4px 14px rgba(48,26,104,.06);
-  font-family: Arial, sans-serif;
-}
-
-.stop:nth-child(3n+1) {
-  background: #F0EAF8;
-}
-
-.stop:nth-child(3n+2) {
-  background: #FBF7EC;
-}
-
-.stop:nth-child(3n) {
-  background: #F7EDF3;
-}
-
-.stop:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 7px 20px rgba(48,26,104,.12);
-}
-
-.stop:focus-visible {
-  outline: 3px solid var(--gold);
-  outline-offset: 3px;
-}
-
-.number {
-  display: block;
-  font-family: Georgia, serif;
-  font-size: 32px;
-  line-height: 1.2;
-  color: var(--purple);
-}
-
-.stop-label {
-  display: block;
-  font-size: 12px;
-  line-height: 1.4;
-  margin-top: 9px;
-}
-
-.note {
-  max-width: 470px;
-  text-align: center;
-  font-family: Georgia, serif;
-  font-size: 19px;
-  color: var(--purple);
-  margin: 0 auto;
-  padding: 0 25px 40px;
-}
-
-footer {
-  background: var(--deep-purple);
-  color: var(--cream);
-  text-align: center;
-  padding: 30px 20px;
-  font-size: 12px;
-  letter-spacing: 1px;
-}
-
-footer .footer-title {
+  border: 1px solid #c9a76b99;
+  border-radius: 4px;
   color: var(--gold);
-  letter-spacing: 2px;
-  margin-bottom: 8px;
+  background:
+    radial-gradient(ellipse at 50% 0%, #88649a66, transparent 75%),
+    linear-gradient(145deg, #49325d, #261733 85%);
+  box-shadow: inset 0 0 22px #d8b7780c, 0 5px 15px #08040f44;
+  transition: transform .2s, border-color .2s, box-shadow .2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 5px;
 }
-
-footer .footer-subtitle {
-  color: #E9DDF7;
-  letter-spacing: .4px;
+.door:hover, .door:focus-visible {
+  transform: translateY(-3px);
+  border-color: #f7dfa6;
+  box-shadow: 0 0 22px #e8cc9133;
+  outline: none;
 }
-
-.overlay {
+.number {
+  font-size: 32px;
+  line-height: 1;
+  font-weight: normal;
+}
+.door-label {
+  font: 9px Arial, sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #e9d8b6;
+}
+.door::after {
+  content: "✧";
+  position: absolute;
+  right: 8px;
+  top: 5px;
+  font-size: 12px;
+  color: #f1dfb5a0;
+}
+.modal-backdrop {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(24,12,47,.78);
-  padding: 17px;
   z-index: 10;
+  background: #0c0712d9;
+  padding: 18px;
   align-items: center;
   justify-content: center;
 }
-
-.overlay.open {
-  display: flex;
-}
-
+.modal-backdrop.open { display: flex; }
 .modal {
-  background: var(--cream);
+  position: relative;
   width: 100%;
-  max-width: 500px;
+  max-width: 520px;
   max-height: 88vh;
   overflow-y: auto;
-  border: 1px solid rgba(217,180,91,.8);
-  border-radius: 21px;
-  padding: 27px 23px 30px;
-  position: relative;
-  box-shadow: 0 15px 55px rgba(0,0,0,.2);
+  padding: 34px 25px 30px;
+  text-align: center;
+  color: #382743;
+  background: linear-gradient(145deg, #fffaf1, #f2e6f1);
+  border: 1px solid var(--gold);
+  box-shadow: 0 0 50px #cba66c25;
 }
-
 .close {
-  float: right;
-  border: none;
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  border: 0;
   background: transparent;
-  font-size: 29px;
+  color: #57415f;
+  font-size: 27px;
   cursor: pointer;
-  color: var(--purple);
-  line-height: 1;
-  padding: 0 0 8px 12px;
 }
-
 .modal-day {
-  color: #94752C;
+  font: 11px Arial, sans-serif;
+  letter-spacing: 3px;
+  color: #99733d;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 11px;
-  margin-top: 5px;
 }
-
 .modal h2 {
-  font-family: Georgia, serif;
+  font-size: 30px;
+  line-height: 1.25;
   font-weight: normal;
-  font-size: 29px;
-  line-height: 1.3;
-  color: var(--purple);
-  margin: 13px 0 18px;
+  margin: 18px 0;
+  color: #392345;
 }
-
 .modal p {
-  font-size: 15px;
+  font: 15px/1.85 Arial, sans-serif;
+  white-space: pre-line;
 }
-
-.modal h3 {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--purple);
-  margin: 0 0 8px;
-}
-
-.prompt,
-.action {
-  border-radius: 14px;
+.reflection {
+  margin-top: 22px;
   padding: 17px;
-  margin-top: 16px;
+  background: #e9ddea;
+  font-style: italic;
+  line-height: 1.7;
 }
-
-.prompt {
-  background: #EDE5F7;
-  border-left: 3px solid var(--purple);
+footer {
+  padding: 0 20px 35px;
+  text-align: center;
+  color: #bba8c8;
+  font: 11px/1.8 Arial, sans-serif;
+  letter-spacing: 1px;
 }
-
-.action {
-  background: #F6EEDB;
-  border-left: 3px solid var(--gold);
-}
-
-.prompt p,
-.action p {
-  margin: 0;
-}
-
 @media (min-width: 520px) {
-  .stops {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 15px;
-  }
-
-  .stop {
-    min-height: 135px;
-  }
+  .calendar { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 15px; }
+  .door { min-height: 125px; }
 }
-
-@media (max-width: 360px) {
-  .stops {
-    gap: 8px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .stop {
-    min-height: 115px;
-    padding: 12px 4px;
-  }
-
-  .number {
-    font-size: 28px;
-  }
-
-  .stop-label {
-    font-size: 11px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  .stop {
-    transition: none;
-  }
+@media (max-width: 350px) {
+  .calendar { gap: 8px; }
+  .door { min-height: 94px; }
+  .number { font-size: 27px; }
 }
 </style>
 </head>
-
 <body>
 
 <header>
-  <div class="eyebrow">24 zastavení na cestě k sobě</div>
+  <div class="eyebrow">24 zastavení · jedna cesta k sobě</div>
   <h1>NULOVÝ BOD</h1>
-  <p class="subtitle">Návrat k sobě</p>
-  <div class="gold-line"></div>
+  <p class="subtitle">24 zastavení na cestě k sobě</p>
+  <div class="line"></div>
+  <p class="intro">
+    Čas zpomalit. Ztišit hluk kolem sebe a znovu zaslechnout
+    vlastní hlas. Každé zastavení je chvílí jen pro tebe —
+    pro návrat k sobě a k ženě, kterou se stáváš.
+  </p>
 </header>
 
-<section class="intro">
-  <p class="quote">„Někdy je největší změnou chvíle, kdy se konečně zastavíš.“</p>
-  <p>Tenhle prostor je jen tvůj.</p>
-  <p>Na chvíli odlož očekávání, povinnosti i potřebu všechno zvládnout. Dopřej si prostor naslouchat sobě, svým potřebám a tomu, co je pro tebe právě teď důležité.</p>
-</section>
+<main>
+  <h2 class="section-title">Tvá cesta začíná tady</h2>
+  <p class="section-note">
+    Vyber si jedno ze 24 zastavení. Nespěchej. Dopřej si chvíli jen pro sebe.
+  </p>
+  <div class="calendar" id="calendar"></div>
+</main>
 
-<h2 class="section-title">Tvoje chvíle. Tvoje cesta.</h2>
-<p class="section-description">
-Vyber si jedno ze 24 zastavení. Nespěchej. Dopřej si chvíli jen pro sebe.
-</p>
-
-<main class="stops" id="stops" aria-label="24 zastavení"></main>
-
-<p class="note">
-Nemusíš mít všechno vyřešené. Stačí začít tam, kde právě jsi.
-</p>
-
-<footer>
-  <div class="footer-title">24 ZASTAVENÍ · NULOVÝ BOD</div>
-  <div class="footer-subtitle">Návrat k sobě</div>
-</footer>
-
-<div class="overlay" id="overlay" role="dialog"
-     aria-modal="true" aria-labelledby="modalTitle">
+<div class="modal-backdrop" id="backdrop"
+     role="dialog" aria-modal="true" aria-labelledby="modalTitle">
   <div class="modal">
     <button class="close" id="close" aria-label="Zavřít">×</button>
     <div class="modal-day" id="modalDay"></div>
     <h2 id="modalTitle"></h2>
-    <div id="modalContent"></div>
+    <p id="modalText"></p>
+    <div class="reflection" id="modalReflection"></div>
   </div>
 </div>
 
+<footer>
+  24 ZASTAVENÍ · NULOVÝ BOD · NÁVRAT K SOBĚ<br>
+  Jeden nádech. Jeden okamžik. Jeden nový začátek.
+</footer>
+
 <script>
-const stops = [
+const days = [
   {
-    title: "Dovol si zastavit se",
-    text: "Nemusíš dnes nic napravovat ani dohánět. Dopřej si několik minut, ve kterých nemusíš nikomu nic dokazovat. Nemusíš podávat výkon ani hledat řešení. Jen buď chvíli tady.",
-    question: "Co by se změnilo, kdybys na chvíli přestala mít na všechno odpověď?",
-    exercise: "Pohodlně se posaď. Třikrát se pomalu nadechni a vydechni. Vnímej, jak se tvoje tělo právě teď opírá o podložku."
+    title: "Tady začínáš",
+    text: "Vítej na začátku své cesty. Na chvíli odlož všechna očekávání, která na sebe kladeš. Nemusíš dnes nic dohánět ani nikomu nic dokazovat. Jen se na chvíli zastav a dovol si být přesně tam, kde právě jsi.",
+    reflection: "Zeptej se sama sebe: Co právě teď nejvíc potřebuji?"
   },
   {
-    title: "Vnímej, co potřebuješ",
-    text: "Každý den vnímáš potřeby druhých. Jejich přání, nálady i očekávání. A někdy se v tom všem ztratí tvůj vlastní hlas. Tvoje potřeby mají stejnou důležitost jako potřeby lidí, o které pečuješ.",
-    question: "Co právě teď potřebuješ ty, kdybys nemusela brát ohled na očekávání ostatních?",
-    exercise: "Doplň větu: Dnes bych si přála… Napiš první odpověď, která tě napadne, bez opravování a hodnocení."
+    title: "Tvé vnitřní tempo",
+    text: "Každá z nás má své tempo. Nemusíš žít podle rytmu ostatních ani stíhat všechno, co vidíš kolem sebe. Dnes si dovol zpomalit alespoň v jedné věci.",
+    reflection: "Kde na sebe zbytečně tlačím?"
   },
   {
-    title: "Vrať se k sobě",
-    text: "Možná jsi dlouho fungovala podle toho, co bylo potřeba, co se očekávalo a co bylo správné pro ostatní. Přitom v tobě pořád existuje místo, které ví, co je ti blízké a co ti dává smysl.",
-    question: "Kdy ses naposledy cítila opravdu sama sebou?",
-    exercise: "Vzpomeň si na jednu chvíli, ve které ses cítila přirozeně a svobodně. Zapiš si, co bylo na této chvíli důležité."
+    title: "Tělo jako domov",
+    text: "Tvé tělo tě provází každým dnem. Nemusíš ho trestat za to, jak vypadá, ani s ním neustále bojovat. Zkus mu dnes věnovat trochu laskavosti.",
+    reflection: "Co by dnes mému tělu udělalo dobře?"
   },
   {
-    title: "Povol sevření",
-    text: "Někdy se snažíme mít pod kontrolou každou maličkost. Chceme předvídat, připravit se a předejít všemu, co by se mohlo pokazit. Neustálá pohotovost ale bere prostor klidu.",
-    question: "Čeho se teď držíš tak pevně, že tě to stojí příliš mnoho energie?",
-    exercise: "Uvolni ramena, čelist a ruce. Vyber si jednu drobnost, kterou dnes necháš být, aniž bys ji musela okamžitě vyřešit."
+    title: "Co už nemusíš nést",
+    text: "Některé povinnosti, očekávání a staré příběhy s sebou neseme tak dlouho, až zapomeneme, že je můžeme přehodnotit. Dnes si všimni jedné věci, kterou už nechceš nést stejným způsobem.",
+    reflection: "Co si mohu dovolit pustit?"
   },
   {
-    title: "Tvoje potřeby mají místo",
-    text: "Odpočinek, blízkost, ticho, prostor nebo obyčejná chvíle bez požadavků. To všechno jsou skutečné potřeby. Nemusíš si zasloužit právo na péči o sebe tím, že nejprve zvládneš úplně všechno.",
-    question: "Kterou svou potřebu odsouváš nejčastěji na později?",
-    exercise: "Vyber jednu malou věc, kterou můžeš pro svou potřebu udělat už dnes. Začni něčím, co je opravdu v tvých možnostech."
+    title: "Tvůj vnitřní hlas",
+    text: "Pod hlasy okolí, radami a očekáváními je i tvůj vlastní hlas. Dopřej mu dnes prostor. Nemusíš hned znát všechny odpovědi. Stačí začít tím, že budeš sama sebe opravdu poslouchat.",
+    reflection: "Co už nějakou dobu sama sobě říkám?"
   },
   {
-    title: "Nemusíš všechno zvládnout",
-    text: "Nemusíš být vždy ta, která si poradí, všechno zařídí a udrží pohromadě. Síla může vypadat i tak, že rozpoznáš své hranice a dovolíš si požádat o pomoc.",
-    question: "Co na sebe bereš, přestože bys na to nemusela být sama?",
-    exercise: "Pojmenuj jednu věc, se kterou by ti mohl někdo pomoci. Promysli, koho můžeš konkrétně a jednoduše požádat."
+    title: "Odpočinek bez výčitek",
+    text: "Odpočinek nemusíš získat tím, že nejdřív všechno dokončíš. Jsi člověk, ne seznam úkolů. Dnes si dopřej malou chvíli klidu bez potřeby ji ospravedlňovat.",
+    reflection: "Jak by vypadal můj odpočinek, kdybych si ho nemusela zasloužit?"
   },
   {
-    title: "Naslouchej svému tělu",
-    text: "Tvoje tělo s tebou komunikuje každý den. Únavou, napětím, dechem, hladem i potřebou pohybu. Nemusíš každému signálu hned rozumět. Můžeš ale začít tím, že mu věnuješ pozornost.",
-    question: "Co ti tvoje tělo v posledních dnech naznačuje?",
-    exercise: "Na chvíli zavři oči, pokud je ti to příjemné. Všimni si dechu, ramen, břicha a čelisti. Nic neměň, jen pozoruj, co právě vnímáš."
+    title: "Tvoje hranice",
+    text: "Hranice nejsou trestem pro druhé. Pomáhají ti chránit to, co je pro tebe důležité. Dnes si všimni situace, ve které říkáš ano, ačkoli uvnitř cítíš ne.",
+    reflection: "Kde potřebuji být k sobě upřímnější?"
   },
   {
-    title: "Dovol si odpočinek",
-    text: "Odpočinek není odměna za dokončený seznam úkolů. Je součástí života, ve kterém chceš mít energii nejen na povinnosti, ale i na věci, které jsou ti blízké.",
-    question: "Co ti brání odpočívat, i když už cítíš únavu?",
-    exercise: "Vyber si deset minut bez úkolu, telefonu a potřeby být produktivní. Dovol si tento čas prožít bez výčitek."
+    title: "Malé radosti",
+    text: "Radost nemusí být velká událost. Může to být teplý čaj, oblíbená píseň, světlo na stěně nebo chvíle, kdy se nikam neženeš. Dnes jednu malou radost vědomě vyhledej.",
+    reflection: "Co mi v poslední době udělalo opravdovou radost?"
   },
   {
-    title: "Co už nechceš nést?",
-    text: "Některé povinnosti a očekávání jsme přijaly tak dávno, že už se ani neptáme, zda nám stále dávají smysl. Ne všechno, co jsi kdysi převzala, musíš nést navždy.",
-    question: "Která zátěž už do tvého současného života nepatří?",
-    exercise: "Napiš si jednu věc, kterou bys chtěla postupně pustit. Nemusíš hned vědět jak. Dnes stačí připustit, že už ji nechceš nést stejným způsobem."
+    title: "Nemusíš být dokonalá",
+    text: "Dokonalost je náročný úkol, který nikdy nekončí. Skutečný život je plný nedokončených věcí, změn plánů a obyčejných dnů. Dnes si dovol udělat něco dostatečně dobře.",
+    reflection: "Co nemusí být dnes dokonalé?"
   },
   {
-    title: "Udělej místo novému",
-    text: "Nové místo někdy vznikne tím, že přestaneš vyplňovat každou volnou chvíli. Když na chvíli zpomalíš, můžeš lépe rozpoznat, co ti chybí a čemu chceš dát prostor.",
-    question: "Pro co bys chtěla mít ve svém životě víc místa?",
-    exercise: "Vyber jednu malou změnu ve svém dni, která vytvoří prostor pro něco, co je pro tebe důležité."
+    title: "Prostor pro emoce",
+    text: "Emoce přicházejí s informacemi o tom, co prožíváš. Nemusíš každou hned vyřešit ani předstírat, že je všechno v pořádku. Zkus své dnešní pocity chvíli pozorovat bez hodnocení.",
+    reflection: "Co mi moje současné pocity mohou napovídat?"
   },
   {
-    title: "Mluv k sobě laskavě",
-    text: "Způsob, jakým k sobě mluvíš, ovlivňuje, jak prožíváš své chyby, únavu i vlastní pokroky. Nemusíš si všechno omlouvat. Můžeš ale se sebou jednat s respektem.",
-    question: "Co si říkáš ve chvílích, kdy se ti něco nepovede? Řekla bys totéž ženě, na které ti záleží?",
-    exercise: "Vzpomeň si na jednu nedávnou situaci, ve které ses kritizovala. Zkus si napsat větu, která je pravdivá a zároveň laskavější."
+    title: "Co ti dodává sílu",
+    text: "Síla nemusí vypadat jako neustálé zvládání všeho. Někdy je to odpočinek, požádání o pomoc nebo přiznání, že je toho hodně. Vzpomeň si dnes na chvíli, kdy ses o sebe dobře postarala.",
+    reflection: "Co mi pomáhá vracet se sama k sobě?"
   },
   {
-    title: "Všimni si svého pokroku",
-    text: "Změna nemusí být vidět na první pohled. Někdy se projeví tím, že se zastavíš dřív, než řekneš ano. Že si všimneš vlastních pocitů. Nebo že se k sobě po náročném dni vrátíš s větším pochopením.",
-    question: "Co dnes zvládáš jinak než před rokem?",
-    exercise: "Napiš si tři věci, které ses naučila, překonala nebo začala vnímat jinak. Dopřej si chvíli uznat, že i tyto změny mají hodnotu."
+    title: "Tvůj vztah k sobě",
+    text: "Zkus si všimnout, jak se sebou mluvíš, když se ti něco nepovede. Promluvila bys takhle i se ženou, kterou máš ráda? Dnes si vyber o trochu laskavější slova.",
+    reflection: "Co bych dnes řekla své nejlepší kamarádce na mém místě?"
   },
   {
-    title: "Nemusíš se srovnávat",
-    text: "Každá žena má jiný příběh, možnosti, zkušenosti i tempo. Když se porovnáváš s někým jiným, často vidíš jen část jeho života a zapomínáš na vlastní cestu.",
-    question: "S kým se nejčastěji srovnáváš a co ti toto srovnávání bere?",
-    exercise: "Dnes si všimni chvíle, kdy se začneš porovnávat. Vrať pozornost k sobě a polož si otázku: Co je důležité pro mě, v mém životě?"
+    title: "Přítomný okamžik",
+    text: "Na chvíli odlož telefon. Všimni si tří věcí, které vidíš, dvou zvuků, které slyšíš, a jednoho pocitu ve svém těle. Nemusíš nic měnit. Jen se vrať do tohoto okamžiku.",
+    reflection: "Co se změní, když na chvíli přestanu spěchat?"
   },
   {
-    title: "Dovol si změnit názor",
-    text: "To, co ti dávalo smysl dříve, nemusí odpovídat tomu, kým jsi dnes. Můžeš přehodnotit své plány, vztahy k věcem i představy o sobě. Změna názoru nemusí znamenat selhání. Může být známkou toho, že se lépe znáš.",
-    question: "V čem pokračuješ hlavně proto, že jsi to kdysi slíbila sama sobě nebo ostatním?",
-    exercise: "Vyber jednu oblast, ve které si dovolíš znovu promyslet, co skutečně chceš. Zatím nemusíš nic měnit."
+    title: "Dovolit si změnu",
+    text: "Máš právo měnit názor, směr i představu o tom, jak má tvůj život vypadat. To, co ti vyhovovalo dřív, nemusí být tím pravým dnes. Dej si prostor zjistit, co potřebuješ nyní.",
+    reflection: "Co už mi v mém současném životě neslouží?"
   },
   {
-    title: "Co ti přináší klid?",
-    text: "Klid nemusí znamenat dokonalé ticho, prázdný kalendář nebo život bez problémů. Někdy je to krátká procházka, rozhovor, modlitba, chvíle o samotě nebo pocit, že nemusíš nic předstírat.",
-    question: "Ve kterých chvílích cítíš, že můžeš opravdu vydechnout?",
-    exercise: "Vyber jednu drobnost, která ti přináší klid, a naplánuj si pro ni konkrétní chvíli během příštích dnů."
+    title: "Tvoje potřeby",
+    text: "I tvoje potřeby mají v rodině, vztazích a každodenním životě své místo. Nemusíš čekat, až budou všichni ostatní spokojení. Zkus dnes pojmenovat jednu svou potřebu a udělat pro ni malý krok.",
+    reflection: "Co potřebuji, ale často to odsouvám?"
   },
   {
-    title: "Vyber si jednu malou věc",
-    text: "Velké změny se často skládají z rozhodnutí, která jsou na první pohled nenápadná. Nemusíš dnes převrátit celý život. Stačí udělat jeden krok směrem, kterým chceš jít.",
-    question: "Která malá změna by ti právě teď přinesla největší úlevu?",
-    exercise: "Převeď svou odpověď na konkrétní krok, který zabere nejvýše deset minut. Urči si, kdy ho uděláš."
+    title: "Odvaha být pravdivá",
+    text: "Nemusíš mít vždy připravenou správnou odpověď. Můžeš říct, že nevíš, že potřebuješ čas nebo že něco cítíš jinak. Upřímnost k sobě začíná drobnými okamžiky.",
+    reflection: "Kde toužím být víc sama sebou?"
   },
   {
-    title: "Tvoje hodnota není výkon",
-    text: "Jsi člověk, ne seznam úkolů. Tvoje hodnota se nemění podle toho, kolik toho zvládneš, kolik lidí potěšíš nebo jak produktivní byl tvůj den. Nemusíš si své místo ve světě každý den znovu zasloužit.",
-    question: "Co o sobě soudíš podle toho, kolik toho zvládneš?",
-    exercise: "Doplň větu: Moje hodnota nezávisí na tom, jestli dnes… Zkus ji nechat chvíli působit, aniž bys ji musela jakkoli dokazovat."
+    title: "Vděčnost bez tlaku",
+    text: "Vděčnost neznamená přehlížet těžké věci. Znamená také všimnout si toho dobrého, co existuje vedle nich. Dnes najdi jednu drobnost, za kterou jsi vděčná, aniž bys musela popírat své starosti.",
+    reflection: "Co dobrého dnes nechci přehlédnout?"
   },
   {
-    title: "Přijmi, kde právě jsi",
-    text: "Nemusíš být se vším spokojená, abys mohla uznat svou současnou situaci. Přijetí není vzdání se změny. Je to možnost přestat bojovat se skutečností a rozhodovat se z místa, kde opravdu stojíš.",
-    question: "Co ve svém současném životě nejvíc potřebuješ přestat popírat nebo si vyčítat?",
-    exercise: "Pojmenuj jednu věc, která je teď součástí tvého života. Zkus si říct: Tohle je moje současná situace. Mohu hledat další krok, aniž bych se za ni trestala."
+    title: "Důvěra v proces",
+    text: "Některé změny potřebují čas. Nemusíš mít celý plán ani vidět konečný výsledek, abys mohla udělat první krok. Dnes se soustřeď na jeden malý krok, který máš ve svých rukou.",
+    reflection: "Jaký malý krok mohu udělat právě dnes?"
   },
   {
-    title: "Věř malým krokům",
-    text: "Nemusíš mít předem jistotu, jak dopadne celá cesta. Někdy získáš jasno až ve chvíli, kdy uděláš první krok. Důležitá změna může začít nenápadným rozhodnutím, které dnes uděláš pro sebe.",
-    question: "Který krok už dlouho odkládáš, protože čekáš na správnou chvíli?",
-    exercise: "Zmenši svůj plán na nejjednodušší možný začátek. Udělej si prostor pro první krok, ne pro celý výsledek."
+    title: "Vztahy a blízkost",
+    text: "Blízkost začíná tam, kde můžeme být opravdové. Nemusíš každého přesvědčit, aby ti rozuměl. Zkus dnes věnovat pozornost vztahu, ve kterém můžeš být sama sebou.",
+    reflection: "Vedle koho se cítím bezpečně a přirozeně?"
   },
   {
-    title: "Co si chceš odpustit?",
-    text: "Každá z nás má chvíle, které by dnes prožila jinak. Nemůžeš změnit minulost, ale můžeš se podívat na své tehdejší rozhodnutí s vědomím toho, co jsi v té době věděla a jaké možnosti jsi měla.",
-    question: "Za co se stále trestáš, přestože už bys chtěla jít dál?",
-    exercise: "Napiš si, co bys tehdy potřebovala vědět, slyšet nebo dostat. Zkus se na svou tehdejší verzi sebe podívat s pochopením, které bys nabídla někomu blízkému."
+    title: "Pustit srovnávání",
+    text: "Vidíš-li cestu druhých, nevidíš celý jejich příběh. Tvůj život nemusí odpovídat cizímu tempu ani představám. Vrať dnes pozornost k tomu, co je důležité právě pro tebe.",
+    reflection: "Podle čeho chci měřit svůj vlastní pokrok?"
   },
   {
-    title: "Představ si svou budoucnost",
-    text: "Představ si sebe za rok. Nejen to, co chceš mít hotové nebo čeho chceš dosáhnout, ale především to, jak se chceš ve svém každodenním životě cítit. Jak chceš zacházet se svým časem, energií a pozorností?",
-    question: "Jak vypadá obyčejný den tvé budoucí verze, která žije v souladu se sebou?",
-    exercise: "Zavři na chvíli oči, pokud je ti to příjemné. Představ si jeden běžný den svého budoucího já. Zapiš si jednu věc, kterou můžeš začít dělat už dnes."
+    title: "Tvoje budoucí já",
+    text: "Představ si sebe za rok. Ne ženu, která všechno zvládá dokonale, ale ženu, která žije o něco víc v souladu se sebou. Jak se cítí? Co už si dovoluje? Co přestala nosit na svých bedrech?",
+    reflection: "Jaký jeden krok může moje dnešní já udělat pro mou budoucí verzi?"
   },
   {
-    title: "V čem chceš pokračovat?",
-    text: "Na své cestě už máš zkušenosti, vztahy, schopnosti i chvíle, které ti něco důležitého ukázaly. Nemusíš začínat úplně od nuly. Můžeš si vybrat, co si chceš vzít s sebou dál.",
-    question: "Co ti v poslední době pomáhá cítit se víc sama sebou?",
-    exercise: "Vyber jednu věc, kterou chceš ve svém životě zachovat nebo posílit. Rozhodni se pro malý způsob, jak jí dát prostor i v následujících dnech."
+    title: "Nový pohled",
+    text: "Nemusíš se stát někým úplně jiným. Možná potřebuješ znovu objevit části sebe, které dlouho čekaly na prostor. Všimni si dnes toho, co v tobě chce znovu ožít.",
+    reflection: "Čemu bych chtěla dát v příštím období víc prostoru?"
   },
   {
-    title: "Poděkuj sama sobě",
-    text: "Věnuj chvíli ženě, která tě provázela všemi tvými dosavadními dny. Tobě. Té, která se snažila, hledala cestu, někdy nevěděla a přesto pokračovala. I ona si zaslouží tvou pozornost a uznání.",
-    question: "Za co bys dnes chtěla poděkovat sama sobě?",
-    exercise: "Napiš si krátký vzkaz sobě. Poděkuj si za něco konkrétního, co jsi zvládla, ustála, pochopila nebo se teprve učíš."
+    title: "Tvůj nový začátek",
+    text: "Zastav se a ohlédni se za svou cestou. I malá uvědomění mají význam. Nemusíš od zítřka změnit celý život. Vyber si jednu věc, kterou si chceš odnést do dalších dnů.",
+    reflection: "Co si z této cesty odnáším a čemu chci zůstat věrná?"
   },
   {
-    title: "Začni odtud",
-    text: "Nemusíš čekat na pondělí, nový měsíc ani okamžik, kdy bude všechno připravené. Máš právě tento den a možnost udělat jedno rozhodnutí, které bude v souladu s tebou. Nemusíš mít hotový plán. Stačí vědět, jakým směrem chceš vykročit.",
-    question: "Co si chceš z těchto 24 zastavení odnést do svého skutečného života?",
-    exercise: "Doplň větu: Od dnešního dne chci sobě dopřát… Vyber jednu věc, ke které se můžeš vracet. Těchto 24 zastavení je jen začátek."
+    title: "Návrat k sobě",
+    text: "Těchto 24 zastavení je jen začátek. Tvůj vztah k sobě pokračuje. Nemusíš na sebe tlačit, abys byla jiná. Můžeš se k sobě vracet znovu a znovu — jedním nádechem, jedním rozhodnutím, jedním laskavějším okamžikem.",
+    reflection: "Doplň větu: Odteď si dovoluji…"
   }
 ];
 
-const stopsContainer = document.getElementById("stops");
-const overlay = document.getElementById("overlay");
-const modalTitle = document.getElementById("modalTitle");
-const modalDay = document.getElementById("modalDay");
-const modalContent = document.getElementById("modalContent");
-const closeButton = document.getElementById("close");
+const calendar = document.getElementById("calendar");
+const backdrop = document.getElementById("backdrop");
 
-stops.forEach((stop, index) => {
+days.forEach((day, index) => {
   const button = document.createElement("button");
-  button.className = "stop";
+  button.className = "door";
   button.type = "button";
-  button.setAttribute("aria-label", "Otevřít zastavení " + (index + 1) + ": " + stop.title);
-
-  const number = document.createElement("span");
-  number.className = "number";
-  number.textContent = String(index + 1).padStart(2, "0");
-
-  const label = document.createElement("span");
-  label.className = "stop-label";
-  label.textContent = stop.title;
-
-  button.appendChild(number);
-  button.appendChild(label);
-
-  button.addEventListener("click", () => openStop(index));
-  stopsContainer.appendChild(button);
+  button.setAttribute("aria-label", "Otevřít zastavení " + (index + 1));
+  button.innerHTML =
+    '<span class="number">' + String(index + 1).padStart(2, "0") + '</span>' +
+    '<span class="door-label">Zastavení</span>';
+  button.addEventListener("click", () => openDay(index));
+  calendar.appendChild(button);
 });
 
-function openStop(index) {
-  const stop = stops[index];
+function openDay(index) {
+  const day = days[index];
 
-  modalDay.textContent =
-    "Zastavení " + String(index + 1).padStart(2, "0");
+  document.getElementById("modalDay").textContent =
+    "ZASTAVENÍ " + String(index + 1).padStart(2, "0");
 
-  modalTitle.textContent = stop.title;
-  modalContent.replaceChildren();
+  document.getElementById("modalTitle").textContent = day.title;
+  document.getElementById("modalText").textContent = day.text;
+  document.getElementById("modalReflection").textContent = day.reflection;
 
-  const text = document.createElement("p");
-  text.textContent = stop.text;
-  modalContent.appendChild(text);
+  backdrop.classList.add("open");
+  document.getElementById("close").focus();
+}
 
-  const prompt = document.createElement("div");
-  prompt.className
+function closeDay() {
+  backdrop.classList.remove("open");
+}
+
+document.getElementById("close").addEventListener("click", closeDay);
+
+backdrop.addEventListener("click", event => {
+  if (event.target === backdrop) closeDay();
+});
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") closeDay();
+});
+</script>
+
+</body>
+</html>
